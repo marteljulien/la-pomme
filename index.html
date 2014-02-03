@@ -1,127 +1,71 @@
-<!DOCTYPE HTML>
-<html><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>La Pomme Marseille</title>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Ekoï</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/jquery.pageslide.css">
+<script src="jqtouch/jqtouch.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div data-role="header" class="tete" data-position="fixed">
+<a class="open" href="#js-menu">Me</a>
+<center><a href="index.html"><img src="img/logo-titre-fond-noir.png" width="150" height="35" /></a></center>
+<hr style="width:100%";>
+<table border="0" width="100%">
+    <tr>
+        <td width="33%" valign="middle"><center><a href="la-marque.html" data-transition="slide"><img src="img/la-marque.png" width="100" height="35" /></a></center></td>
+        <td width="34%" valign="middle"><center><a href="showroom.html"><img src="img/showroom.png" width="100" height="35" /></a></center></td>
+        <td width="33%" valign="middle"><center><a href="avis-clients.html"><img src="img/avis-clients.png" width="100" height="35" /></a></center></td>
+    </tr>
+</table>
+</div>
+  <nav id="js-menu" class="menu">
+  <h1>MENU</h1>
+    <ul class="rounded">
+    	<li class="arrow"><a href="textile.html" data-transition="pop">Textile</a> </li>
+     	<li class="arrow"><a href="lunettes.html">Lunettes</a> </li>
+   		<li class="arrow"><a href="casques.html">Casques</a></li>
+      	<li class="arrow"><a href="chaussures.html">Chaussures</a></li>
+		<li class="arrow"><a href="compression.html">Compression</a></li>
+        <li class="arrow"><a href="accessoires.html">Accessoires</a></li>
+        <li class="arrow"><a href="compression.html">Compression</a></li>
+        <li class="arrow"><a href="dietetique.html">Di&eacute;t&eacute;tique</a></li>
+    </ul>
+  </nav>
 
+  <div role="main">
+<br><br>
+    <p><center><br><br><br>
+<img src="img/vente-flash.png" width="280" height=109" /><br><br>
+<img src="img/sv-2014.png" width="280" height="122" /><br><br>
+<img src="img/soldes.png" width="280" height=122" /><br><br><br>
+    </center>
+    </p>
+
+  </div>
+<div data-role="footer" class="bas" data-position="fixed">
+      <table border="0" width="100%">
+          <tr>
+              <td width="25%" height="50" valign="middle"><center><a href="http://www.facebook.fr" target="_blank" data-transition="flip"><img src="img/facebook.png" width="50" height="50" /></a></center></td>
+              <td width="25%" valign="middle"><center><a href="http://www.twitter.fr" target="_blank"><img src="img/twitter.png" width="50" height="50" /></a></center></td>
+              <td width="25%" valign="middle"><center><a href=""><img src="img/cgv.png" width="50" height="50" /></a></center></td>
+              <td width="25%" valign="middle"><center><a href="contact.html"><img src="img/contact.png" width="50" height="50" /></a></center></td>
+          </tr>
+      </table>
+
+  
+  
+  </div>
 
 <script src="jqtouch/jquery.1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="jqtouch/jqtouch.min.js" type="text/javascript" charset="utf-8"></script>
-<link href="jqtouch/jqtouch.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/jquery.pageslide.css">
 <script src="js/jquery.pageslide.min.js"></script>
-<script type="text/javascript" charset="utf-8">
-            var jQT = new $.jQTouch({
-                icon: 'icon.png',
-                addGlossToIcon: true,
-                startupScreen: 'Default2.png',
-                statusBar: 'black',
-            });
-			
-			    $(document).ready(function() { 
-    $.ajax({ 
-                type: "GET", 
-                url: "http://www.webspaceinvader.com/rsslib/rss.xml", 
-                dataType: "xml", 
-                success: parseXml, 
-                error: errorMsg 
-        }); 
-        function parseXml(xml) 
-        { 
-                $('#output').empty(); 
-                $(xml).find("item").each(function() 
-                { 
-                        var title = $(this).find('title').text();
-                        var pubDate = $(this).find('pubDate').text();
-                        var desc = $(this).find('description').text(); 
-                        var listItem = $('<li class="myrss">' + title + '<br/>' +
-pubDate + '<br/>' + desc + '</li>');
-                        $("#output").append(listItem);
-                });
-        }
-        function errorMsg() { 
-                $("#output").append("error getting xml feed"); 
-        } 
-  });
-
-</script>
-<style type="text/css">
-.center {
-	display: block;
-	margin-left: auto;
-    margin-right: auto;
-	margin-top: 10px;
-	text-align: center;
-}
-.light {
-	color: #FFF;
-}
-.myrss {
-	color: #FFF;
-}
-</style>
-</head>
-
-<body>
-	<div id="home" class="current">
-        <p class="center">La Pomme<br>
-
-<a class="open" href="#js-menu">Me</a>
-
-
-    </div>
-	
-	
-    <nav id="js-menu" class="menu">
-        <h1>MENU</h1>
-        <ul class="rounded">
-            <li class="arrow"><a href="textile.html" data-transition="pop">Textile</a> </li>
-            <li class="arrow"><a href="lunettes.html">Lunettes</a> </li>
-            <li class="arrow"><a href="casques.html">Casques</a></li>
-            <li class="arrow"><a href="chaussures.html">Chaussures</a></li>
-            <li class="arrow"><a href="compression.html">Compression</a></li>
-            <li class="arrow"><a href="accessoires.html">Accessoires</a></li>
-            <li class="arrow"><a href="compression.html">Compression</a></li>
-            <li class="arrow"><a href="dietetique.html">Di&eacute;t&eacute;tique</a></li>
-        </ul>
-    </nav>
-
-
-    <div id="lequipe">
-    <div class="toolbar">
-                <h1>Equipe</h1>
-                <a href="#" class="back">Retour</a>
-            </div>
-            <ul class="rounded">
-    			<li class="light">
-				<center>
-				Test
-				</center>
-                
-    			</li>
-				</ul>
-    </div>
-	
-	<div id="calendrier">
-    <div class="toolbar">
-                <h1>Calendrier</h1>
-                <a href="#" class="back">Retour</a>
-            </div>
-
-				<ul class="rounded">
-			
-    			<li class="light">
-				<center>
-				<h1>test</h1>
-
-				</center>
-                
-    			</li>
-      </ul>
-</div>
-
 <script>
 	$(".open").pageslide();
-    </script>
+</script>
 </body>
 </html>
